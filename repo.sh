@@ -94,7 +94,9 @@ function main {
                 local CHECK_ERR=0
                 $PIPENV_CMD run flake8 || CHECK_ERR=$((CHECK_ERR + 1))
                 $PIPENV_CMD run mypy || CHECK_ERR$((CHECK_ERR + 1))
-                return $CHECK_ERR
+                if [[ "$CHECK_ERR" -ne 0 ]]; then
+                    return $CHECK_ERR;
+                fi 
                 ;;
             package)
                 $PIPENV_CMD run python setup.py bdist_wheel
