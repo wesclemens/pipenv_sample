@@ -1,0 +1,49 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.linting.mypyEnabled": true,
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.testing.unittestArgs": ["-v", "-s", "./tests", "-p", "test_*.py"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": true,
+
+  "terminal.integrated.profiles.osx": {
+    "pipenv": {
+      "path": "pipenv",
+      "args": ["shell"],
+      "overrideName": true
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "pipenv",
+  "terminal.integrated.profiles.windows": {
+    "pipenv": {
+      "path": "pipenv",
+      "args": ["shell"],
+      "overrideName": true
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "pipenv",
+  "terminal.integrated.profiles.linux": {
+    "pipenv": {
+      "path": "pipenv",
+      "args": ["shell"],
+      "overrideName": true
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "pipenv",
+
+  "json.format.enable": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "restructuredtext.confPath": ""
+}

@@ -1,0 +1,13 @@
+[flake8]
+# Match black line length (default 88)
+max-line-length = 88
+# See https://github.com/PyCQA/pycodestyle/issues/373
+extend-ignore =
+    E203
+max-complexity = 10
+extend =
+    text
+import-order-style = pep8
+enable-extensions = G, T4
+show-source = True
+doctests = True

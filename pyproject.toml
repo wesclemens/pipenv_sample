@@ -1,0 +1,23 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=51.0", "wheel", "setuptools_scm[toml]>=3.4"]
+
+[tool.setuptools_scm]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = "**/*.py"
+python_version = "3.9"
+
+[tool.black]
+target-version = ["py39"]
+
+[tool.coverage.run]
+branch = true
+command_line = "-m unittest discover -v -s ./tests -p test_*.py"
+include = ["sample*"]
+
+[tool.coverage.report]
+exclude_lines = ["if __name__ == .__main__.:"]

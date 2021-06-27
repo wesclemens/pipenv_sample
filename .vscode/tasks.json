@@ -1,0 +1,37 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Coverage (repo.sh test)",
+      "group": "test",
+      "type": "process",
+      "command": "bash",
+      "args": ["./repo.sh", "test"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Binary Dist Wheel (repo.sh lint test package)",
+      "group": "build",
+      "type": "process",
+      "command": "bash",
+      "args": ["./repo.sh", "lint", "test", "package"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Format (repo.sh format)",
+      "type": "process",
+      "command": "bash",
+      "args": ["./repo.sh", "format"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint (repo.sh lint)",
+      "type": "process",
+      "command": "bash",
+      "args": ["./repo.sh", "lint"],
+      "problemMatcher": []
+    }
+  ]
+}
